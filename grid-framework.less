@@ -33,7 +33,7 @@
 
 .create-grid(@columns);
 
-@media (min-width: @screenTablet) {
+@media screen and (max-width: @screenTablet) {
 	.create-grid(@index) when(@index > 0) {
 	.col-sm-@{index} {
 		width: @columnWidth * @index;
@@ -47,7 +47,7 @@
 
 }
 
-@media (min-width: @screenDesktop) {
+@media screen and (max-width: @screenDesktop) {
 	.create-grid(@index) when(@index > 0) {
 	.col-md-@{index} {
 		width: @columnWidth * @index;
@@ -61,7 +61,7 @@
 	
 }
 
-@media (min-width: @screenLarge) {
+@media screen and (max-width: @screenLarge) {
 	.create-grid(@index) when(@index > 0) {
 	.col-lg-@{index} {
 		width: @columnWidth * @index;
