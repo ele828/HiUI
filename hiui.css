@@ -77,7 +77,63 @@
   width: 8.33333333%;
   float: left;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 320px) {
+  .container {
+    width: 100%;
+  }
+  .col-xs-12 {
+    width: 100%;
+    float: left;
+  }
+  .col-xs-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .col-xs-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .col-xs-9 {
+    width: 75%;
+    float: left;
+  }
+  .col-xs-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-xs-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .col-xs-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-xs-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .col-xs-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-xs-3 {
+    width: 25%;
+    float: left;
+  }
+  .col-xs-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .col-xs-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 95%;
+  }
   .col-sm-12 {
     width: 100%;
     float: left;
@@ -127,7 +183,10 @@
     float: left;
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+  }
   .col-md-12 {
     width: 100%;
     float: left;
@@ -177,7 +236,10 @@
     float: left;
   }
 }
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 80%;
+  }
   .col-lg-12 {
     width: 100%;
     float: left;

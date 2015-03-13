@@ -33,7 +33,27 @@
 
 .create-grid(@columns);
 
-@media screen and (max-width: @screenTablet) {
+@media screen and (min-width: @screenMobile) {
+	.container {
+		width: 100%;
+	}
+	.create-grid(@index) when(@index > 0) {
+	.col-xs-@{index} {
+		width: @columnWidth * @index;
+		float: left;
+
+	}
+	.create-grid(@index - 1);
+	}
+
+.create-grid(@columns);
+
+}
+
+@media screen and (min-width: @screenTablet) {
+	.container {
+		width: 95%;
+	}
 	.create-grid(@index) when(@index > 0) {
 	.col-sm-@{index} {
 		width: @columnWidth * @index;
@@ -47,7 +67,10 @@
 
 }
 
-@media screen and (max-width: @screenDesktop) {
+@media screen and (min-width: @screenDesktop) {
+	.container {
+		width: 90%;
+	}
 	.create-grid(@index) when(@index > 0) {
 	.col-md-@{index} {
 		width: @columnWidth * @index;
@@ -61,7 +84,10 @@
 	
 }
 
-@media screen and (max-width: @screenLarge) {
+@media screen and (min-width: @screenLarge) {
+	.container {
+		width: 80%;
+	}
 	.create-grid(@index) when(@index > 0) {
 	.col-lg-@{index} {
 		width: @columnWidth * @index;
