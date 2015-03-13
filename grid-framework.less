@@ -1,0 +1,88 @@
+* {
+    margin: 0 auto;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+.container {
+	width: 80%;
+}
+
+.row {
+	width: 100%;
+}
+
+.col {
+	.clear();
+}
+
+.col[class*="col-"] {
+
+	min-height: 1px;
+}
+
+.create-grid(@index) when(@index > 0) {
+	.col-md-@{index} {
+		width: @columnWidth * @index;
+		float: left;
+
+	}
+	.create-grid(@index - 1);
+}
+
+.create-grid(@columns);
+
+@media (min-width: @screenTablet) {
+	.create-grid(@index) when(@index > 0) {
+	.col-sm-@{index} {
+		width: @columnWidth * @index;
+		float: left;
+
+	}
+	.create-grid(@index - 1);
+	}
+
+.create-grid(@columns);
+
+}
+
+@media (min-width: @screenDesktop) {
+	.create-grid(@index) when(@index > 0) {
+	.col-md-@{index} {
+		width: @columnWidth * @index;
+		float: left;
+
+	}
+	.create-grid(@index - 1);
+	}
+
+.create-grid(@columns);
+	
+}
+
+@media (min-width: @screenLarge) {
+	.create-grid(@index) when(@index > 0) {
+	.col-lg-@{index} {
+		width: @columnWidth * @index;
+		float: left;
+
+	}
+	.create-grid(@index - 1);
+	}
+
+.create-grid(@columns);
+
+}
+
+// clear floating
+.clear {
+	zoom: 1;
+	&:after {
+		display: block;
+		visibility: hidden;
+		height: 0;
+		clear: both;
+		content: ".";
+	}
+}
