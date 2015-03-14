@@ -1883,7 +1883,7 @@ a {
   color: #ffffff;
 }
 p {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+  font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
   font-size: 1.2rem;
   font-weight: 200;
 }
@@ -1973,7 +1973,7 @@ strong {
 }
 @media screen and (min-width: 0) and (max-width: 480px) {
   p {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
     font-size: 0.84rem;
     font-weight: 200;
   }
@@ -2064,7 +2064,7 @@ strong {
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   p {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
     font-size: 0.96rem;
     font-weight: 200;
   }
@@ -2155,7 +2155,7 @@ strong {
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   p {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
     font-size: 1.08rem;
     font-weight: 200;
   }
@@ -2246,7 +2246,7 @@ strong {
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   p {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
     font-size: 1.2rem;
     font-weight: 200;
   }
@@ -2337,33 +2337,40 @@ strong {
 }
 /* Preset Button Styles */
 .btn-border-default {
-  width: 70px;
+  min-width: 70px;
   height: 35px;
+  padding: 0px 8px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #000000;
-  border-radius: 5px;
-  border: 1px solid #000000;
+  color: #969696;
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
   line-height: 35px;
   transition: 0.4s ease-out;
   cursor: pointer;
+  font-weight: normal;
+}
+.btn-border-default > i {
+  font-size: 1rem;
 }
 .btn-border-default:active {
   border-color: transparent;
 }
-.btn-border-default:hover {
-  border-color: #000000;
-  background: #000000;
+.btn-border-default:hover,
+.btn-border-default:focus {
+  border-color: #c4c4c4;
+  background: #c4c4c4;
   color: #fff;
   cursor: pointer;
 }
 .btn-border-primary {
-  width: 70px;
+  min-width: 70px;
   height: 35px;
+  padding: 0px 8px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -2371,24 +2378,30 @@ strong {
   font-size: 1rem;
   white-space: nowrap;
   color: #00a8e6;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #00a8e6;
   line-height: 35px;
   transition: 0.4s ease-out;
   cursor: pointer;
+  font-weight: normal;
+}
+.btn-border-primary > i {
+  font-size: 1rem;
 }
 .btn-border-primary:active {
   border-color: transparent;
 }
-.btn-border-primary:hover {
+.btn-border-primary:hover,
+.btn-border-primary:focus {
   border-color: #00a8e6;
   background: #00a8e6;
   color: #fff;
   cursor: pointer;
 }
 .btn-border-danger {
-  width: 70px;
+  min-width: 70px;
   height: 35px;
+  padding: 0px 8px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -2396,24 +2409,30 @@ strong {
   font-size: 1rem;
   white-space: nowrap;
   color: #d9534f;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #d9534f;
   line-height: 35px;
   transition: 0.4s ease-out;
   cursor: pointer;
+  font-weight: normal;
+}
+.btn-border-danger > i {
+  font-size: 1rem;
 }
 .btn-border-danger:active {
   border-color: transparent;
 }
-.btn-border-danger:hover {
+.btn-border-danger:hover,
+.btn-border-danger:focus {
   border-color: #d9534f;
   background: #d9534f;
   color: #fff;
   cursor: pointer;
 }
 .btn-border-warning {
-  width: 70px;
+  min-width: 70px;
   height: 35px;
+  padding: 0px 8px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -2421,24 +2440,30 @@ strong {
   font-size: 1rem;
   white-space: nowrap;
   color: #f0ad4e;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #f0ad4e;
   line-height: 35px;
   transition: 0.4s ease-out;
   cursor: pointer;
+  font-weight: normal;
+}
+.btn-border-warning > i {
+  font-size: 1rem;
 }
 .btn-border-warning:active {
   border-color: transparent;
 }
-.btn-border-warning:hover {
+.btn-border-warning:hover,
+.btn-border-warning:focus {
   border-color: #f0ad4e;
   background: #f0ad4e;
   color: #fff;
   cursor: pointer;
 }
 .btn-border-success {
-  width: 70px;
+  min-width: 70px;
   height: 35px;
+  padding: 0px 8px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -2446,38 +2471,226 @@ strong {
   font-size: 1rem;
   white-space: nowrap;
   color: #8cc14c;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #8cc14c;
   line-height: 35px;
   transition: 0.4s ease-out;
   cursor: pointer;
+  font-weight: normal;
+}
+.btn-border-success > i {
+  font-size: 1rem;
 }
 .btn-border-success:active {
   border-color: transparent;
 }
-.btn-border-success:hover {
+.btn-border-success:hover,
+.btn-border-success:focus {
   border-color: #8cc14c;
   background: #8cc14c;
   color: #fff;
   cursor: pointer;
 }
+.btn-solid-default {
+  min-width: 70px;
+  height: 35px;
+  padding: 0px 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #efefef;
+  background: #c4c4c4;
+  border-radius: 3px;
+  line-height: 35px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  font-weight: normal;
+}
+.btn-solid-default > i {
+  font-size: 1rem;
+}
+.btn-solid-default:active {
+  border-color: transparent;
+}
+.btn-solid-default:hover,
+.btn-solid-default:focus {
+  background: #dedede;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-solid-primary {
+  min-width: 70px;
+  height: 35px;
+  padding: 0px 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #efefef;
+  background: #00a8e6;
+  border-radius: 3px;
+  line-height: 35px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  font-weight: normal;
+}
+.btn-solid-primary > i {
+  font-size: 1rem;
+}
+.btn-solid-primary:active {
+  border-color: transparent;
+}
+.btn-solid-primary:hover,
+.btn-solid-primary:focus {
+  background: #1ac1ff;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-solid-danger {
+  min-width: 70px;
+  height: 35px;
+  padding: 0px 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #efefef;
+  background: #d9534f;
+  border-radius: 3px;
+  line-height: 35px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  font-weight: normal;
+}
+.btn-solid-danger > i {
+  font-size: 1rem;
+}
+.btn-solid-danger:active {
+  border-color: transparent;
+}
+.btn-solid-danger:hover,
+.btn-solid-danger:focus {
+  background: #e27c79;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-solid-warning {
+  min-width: 70px;
+  height: 35px;
+  padding: 0px 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #efefef;
+  background: #f0ad4e;
+  border-radius: 3px;
+  line-height: 35px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  font-weight: normal;
+}
+.btn-solid-warning > i {
+  font-size: 1rem;
+}
+.btn-solid-warning:active {
+  border-color: transparent;
+}
+.btn-solid-warning:hover,
+.btn-solid-warning:focus {
+  background: #f4c37d;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-solid-success {
+  min-width: 70px;
+  height: 35px;
+  padding: 0px 8px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #efefef;
+  background: #8cc14c;
+  border-radius: 3px;
+  line-height: 35px;
+  transition: 0.4s ease-out;
+  cursor: pointer;
+  font-weight: normal;
+}
+.btn-solid-success > i {
+  font-size: 1rem;
+}
+.btn-solid-success:active {
+  border-color: transparent;
+}
+.btn-solid-success:hover,
+.btn-solid-success:focus {
+  background: #a4ce72;
+  color: #fff;
+  cursor: pointer;
+}
 .btn-xs {
   font-size: 0.6rem;
-  width: 40px;
-  height: 26.66666667px;
-  line-height: 26.66666667px;
+  min-width: 50px;
+  height: 33.33333333px;
+  line-height: 33.33333333px;
+  padding: 0px 16.66666667px;
+}
+.btn-xs > i {
+  font-size: 0.6rem;
 }
 .btn-md {
   font-size: 0.9rem;
-  width: 70px;
+  min-width: 70px;
   height: 35px;
   line-height: 35px;
+  padding: 0px 23.33333333px;
+}
+.btn-md > i {
+  font-size: 0.9rem;
 }
 .btn-lg {
   font-size: 1rem;
-  width: 80px;
+  min-width: 80px;
   height: 40px;
   line-height: 40px;
+  padding: 0px 26.66666667px;
+}
+.btn-lg > i {
+  font-size: 1rem;
+}
+.panel {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+}
+.panel-head {
+  padding: 10px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.panel-body {
+  padding: 10px 10px;
+}
+.panel-foot {
+  padding: 10px 10px;
+  border-top: 1px solid #ddd;
+}
+.panel-success {
+  border-color: #8cc14c;
 }
 /* Grid frameworks */
 .container {

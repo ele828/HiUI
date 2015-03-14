@@ -1,9 +1,11 @@
 
 /* Preset Button Styles */
 
+// Border Button
 .border-btn(@height; @width; @bg; @color; @font-color; @font-size) {
-	width: @width;
+	min-width: @width;
 	height: @height;
+	padding: 0px 8px;
 	display: inline-block;
 	text-align: center;
 	vertical-align: middle;
@@ -11,17 +13,22 @@
 	font-size: @font-size;
 	white-space: nowrap;
 	color: @font-color;
-	border-radius: 5px;
+	border-radius: 3px;
 	border: 1px solid @color;
 	line-height: @height;
 	transition: .4s ease-out;
 	cursor: pointer;
+	font-weight: normal;
+		&>i {
+			font-size: @font-size;
+		}
 
 		&:active {
 			border-color: transparent;
 		}
 
-		&:hover {
+		&:hover,
+		&:focus {
 			border-color: @color;
 			background: @bg;
 			color: #fff;
@@ -31,13 +38,17 @@
 
 .btn-adjust (@font-size; @width; @height;) {
 	font-size: @font-size;
-	width: @width;
+	min-width: @width;
 	height: @height;
 	line-height: @height;
+	padding: 0px @width / 3;
+		&>i {
+			font-size: @font-size;
+		}
 }
 
 .btn-border-default {
-	.border-btn(@btn-height; @btn-width; #000; #000; #000;1rem);
+	.border-btn(@btn-height; @btn-width; #C4C4C4; #C4C4C4; #969696;1rem);
 }
 
 .btn-border-primary {
@@ -56,6 +67,63 @@
 	.border-btn(@btn-height; @btn-width; @success-color; @success-color; @success-color;1rem);	
 }
 
+// Border Button End
+
+// Solid Button
+.solid-btn(@height; @width; @bg; @color; @font-color; @font-size) {
+	min-width: @width;
+	height: @height;
+	padding: 0px 8px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	font-size: @font-size;
+	white-space: nowrap;
+	color: #efefef;
+	background: @bg;
+	border-radius: 3px;
+	line-height: @height;
+	transition: .4s ease-out;
+	cursor: pointer;
+	font-weight: normal;
+		&>i {
+			font-size: @font-size;
+		}
+
+		&:active {
+			border-color: transparent;
+		}
+
+		&:hover,
+		&:focus {
+			background: lighten(@bg, 10%);
+			color: #fff;
+			cursor: pointer;
+		}
+}
+
+.btn-solid-default {
+	.solid-btn(@btn-height; @btn-width; #C4C4C4; #C4C4C4; #969696;1rem);
+}
+
+.btn-solid-primary {
+	.solid-btn(@btn-height; @btn-width; @primary-color; @primary-color; @primary-color;1rem);
+}
+
+.btn-solid-danger {
+	.solid-btn(@btn-height; @btn-width; @danger-color; @danger-color; @danger-color;1rem);	
+}
+
+.btn-solid-warning {
+	.solid-btn(@btn-height; @btn-width; @warning-color; @warning-color; @warning-color;1rem);	
+}
+
+.btn-solid-success {
+	.solid-btn(@btn-height; @btn-width; @success-color; @success-color; @success-color;1rem);	
+}
+
+// adjust the size of Button
 .btn-xs {
 	.btn-adjust(@btn-xs-font-size, @btn-xs-width, @btn-xs-height);
 }
