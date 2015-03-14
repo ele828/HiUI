@@ -4,20 +4,22 @@
 ////////////////////
 ////////////////////
 .panel {
-	width: 100%;
+	width: 95%;
 	height: 100%;
 	border: 1px solid #ddd;
-	border-radius: 4px;
+	border-radius: 3px;
 	background: #fff;
 }
 
 .panel-head {
+	border-radius: 3px;
 	padding: 10px 10px;
 	border-bottom: 1px solid #ddd;
 }
 
 .panel-body {
 	padding: 10px 10px;
+	line-height: 20px;
 }
 
 .panel-foot {
@@ -29,7 +31,39 @@
 
 }
 
+.panel-color(@color) {
+	border-color: @color;
+
+	&>.panel-head {
+		border-radius: 3px;
+		color: darken(@color, 20%);
+		background: lighten(@color, 40%);
+		border-bottom: 1px solid @color;
+	}
+
+	&>.panel-foot {
+		border-top: 1px solid @color;
+		color: #929292;
+	}
+}
+
 .panel-success {
-	border-color: @success-color;
+	.panel-color(@success-color);
+}
+
+.panel-primary {
+	.panel-color(@primary-color);
+}
+
+.panel-danger {
+	.panel-color(@danger-color);
+}
+
+.panel-warning {
+	.panel-color(@warning-color);
+}
+
+.panel-default {
+	.panel-color(@default-color);
 }
 
