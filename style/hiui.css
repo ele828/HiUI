@@ -4,24 +4,539 @@
 ***	Define global variables
 ***
 **/
+/* transition-time */
+/* Font Family */
+/* global color var */
+/* button color var */
+/* Minxins */
+/* Global basic setting */
 * {
   margin: 0 auto;
+  outline: none;
+  word-break: break-all;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html {
+  font-size: 16px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.primary-bg-color {
+  background: #00a8e6;
+}
+.success-bg-color {
+  background: #8cc14c;
+}
+.danger-bg-color {
+  background: #d9534f;
+}
+.warnning-bg-color {
+  background: #f0ad4e;
+}
+.disabled-bg-color {
+  background: #eeeeee;
+}
+.black-bg-color {
+  background: #000000;
+}
+.default-bg-color {
+  background: #ffffff;
+}
+.primary-color {
+  color: #00a8e6;
+}
+.success-color {
+  color: #8cc14c;
+}
+.warning-color {
+  color: #f0ad4e;
+}
+.danger-color {
+  color: #d9534f;
+}
+.disabled-color {
+  color: #eeeeee;
+}
+.black-color {
+  color: #000000;
+}
+.default-color {
+  color: #ffffff;
+}
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+small,
+span {
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-weight: 400;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+h1,
+.h1 {
+  font-size: 2rem;
+}
+h1 small,
+.h1 small {
+  font-size: 1.2rem;
+}
+h2,
+.h2 {
+  font-size: 1.9rem;
+}
+h2 small,
+.h2 small {
+  font-size: 1.2rem;
+}
+h3,
+.h3 {
+  font-size: 1.7rem;
+}
+h3 small,
+.h3 small {
+  font-size: 1.2rem;
+}
+h4,
+.h4 {
+  font-size: 1.5rem;
+}
+h4 small,
+.h4 small {
+  font-size: 1.2rem;
+}
+h5,
+.h5 {
+  font-size: 1.4rem;
+}
+h5 small,
+.h5 small {
+  font-size: 1.2rem;
+}
+h6,
+.h6 {
+  font-size: 1.2rem;
+}
+h6 small,
+.h6 small {
+  font-size: 1.2rem;
+}
+b,
+strong {
+  font-weight: 1000;
+}
+.grand-title {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.grand-title small {
+  font-size: 1.2rem;
+}
+.lead {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-weight: 300;
+}
+@media screen and (min-width: 0) and (max-width: 480px) {
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 0.84rem;
+    font-weight: 200;
+  }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  small,
+  span {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  h1,
+  .h1 {
+    font-size: 1.4rem;
+  }
+  h1 small,
+  .h1 small {
+    font-size: 0.84rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.33rem;
+  }
+  h2 small,
+  .h2 small {
+    font-size: 0.84rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.19rem;
+  }
+  h3 small,
+  .h3 small {
+    font-size: 0.84rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.05rem;
+  }
+  h4 small,
+  .h4 small {
+    font-size: 0.84rem;
+  }
+  h5,
+  .h5 {
+    font-size: 0.98rem;
+  }
+  h5 small,
+  .h5 small {
+    font-size: 0.84rem;
+  }
+  h6,
+  .h6 {
+    font-size: 0.84rem;
+  }
+  h6 small,
+  .h6 small {
+    font-size: 0.84rem;
+  }
+  b,
+  strong {
+    font-weight: 1000;
+  }
+  .grand-title {
+    font-weight: 700;
+    font-size: 2.1rem;
+  }
+  .grand-title small {
+    font-size: 0.84rem;
+  }
+  .lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 0.96rem;
+    font-weight: 200;
+  }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  small,
+  span {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  h1,
+  .h1 {
+    font-size: 1.6rem;
+  }
+  h1 small,
+  .h1 small {
+    font-size: 0.96rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.52rem;
+  }
+  h2 small,
+  .h2 small {
+    font-size: 0.96rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.36rem;
+  }
+  h3 small,
+  .h3 small {
+    font-size: 0.96rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.2rem;
+  }
+  h4 small,
+  .h4 small {
+    font-size: 0.96rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.12rem;
+  }
+  h5 small,
+  .h5 small {
+    font-size: 0.96rem;
+  }
+  h6,
+  .h6 {
+    font-size: 0.96rem;
+  }
+  h6 small,
+  .h6 small {
+    font-size: 0.96rem;
+  }
+  b,
+  strong {
+    font-weight: 1000;
+  }
+  .grand-title {
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
+  .grand-title small {
+    font-size: 0.96rem;
+  }
+  .lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 1.08rem;
+    font-weight: 200;
+  }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  small,
+  span {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  h1,
+  .h1 {
+    font-size: 1.8rem;
+  }
+  h1 small,
+  .h1 small {
+    font-size: 1.08rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.71rem;
+  }
+  h2 small,
+  .h2 small {
+    font-size: 1.08rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.53rem;
+  }
+  h3 small,
+  .h3 small {
+    font-size: 1.08rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.35rem;
+  }
+  h4 small,
+  .h4 small {
+    font-size: 1.08rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.26rem;
+  }
+  h5 small,
+  .h5 small {
+    font-size: 1.08rem;
+  }
+  h6,
+  .h6 {
+    font-size: 1.08rem;
+  }
+  h6 small,
+  .h6 small {
+    font-size: 1.08rem;
+  }
+  b,
+  strong {
+    font-weight: 1000;
+  }
+  .grand-title {
+    font-weight: 700;
+    font-size: 2.7rem;
+  }
+  .grand-title small {
+    font-size: 1.08rem;
+  }
+  .lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6,
+  small,
+  span {
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 400;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  h1,
+  .h1 {
+    font-size: 2rem;
+  }
+  h1 small,
+  .h1 small {
+    font-size: 1.2rem;
+  }
+  h2,
+  .h2 {
+    font-size: 1.9rem;
+  }
+  h2 small,
+  .h2 small {
+    font-size: 1.2rem;
+  }
+  h3,
+  .h3 {
+    font-size: 1.7rem;
+  }
+  h3 small,
+  .h3 small {
+    font-size: 1.2rem;
+  }
+  h4,
+  .h4 {
+    font-size: 1.5rem;
+  }
+  h4 small,
+  .h4 small {
+    font-size: 1.2rem;
+  }
+  h5,
+  .h5 {
+    font-size: 1.4rem;
+  }
+  h5 small,
+  .h5 small {
+    font-size: 1.2rem;
+  }
+  h6,
+  .h6 {
+    font-size: 1.2rem;
+  }
+  h6 small,
+  .h6 small {
+    font-size: 1.2rem;
+  }
+  b,
+  strong {
+    font-weight: 1000;
+  }
+  .grand-title {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  .grand-title small {
+    font-size: 1.2rem;
+  }
+  .lead {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-weight: 300;
+  }
+}
 .container {
   width: 80%;
 }
-.row {
-  zoom: 1;
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
 }
 .row:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
   clear: both;
-  content: ".";
 }
 .row {
   width: 100%;
@@ -33,53 +548,150 @@
   width: 100%;
   float: left;
 }
+.col-md-offset-12 {
+  width: ;
+}
 .col-md-11 {
   width: 91.66666667%;
   float: left;
+}
+.col-md-offset-11 {
+  width: ;
 }
 .col-md-10 {
   width: 83.33333333%;
   float: left;
 }
+.col-md-offset-10 {
+  width: ;
+}
 .col-md-9 {
   width: 75%;
   float: left;
+}
+.col-md-offset-9 {
+  width: ;
 }
 .col-md-8 {
   width: 66.66666667%;
   float: left;
 }
+.col-md-offset-8 {
+  width: ;
+}
 .col-md-7 {
   width: 58.33333333%;
   float: left;
+}
+.col-md-offset-7 {
+  width: ;
 }
 .col-md-6 {
   width: 50%;
   float: left;
 }
+.col-md-offset-6 {
+  width: ;
+}
 .col-md-5 {
   width: 41.66666667%;
   float: left;
+}
+.col-md-offset-5 {
+  width: ;
 }
 .col-md-4 {
   width: 33.33333333%;
   float: left;
 }
+.col-md-offset-4 {
+  width: ;
+}
 .col-md-3 {
   width: 25%;
   float: left;
+}
+.col-md-offset-3 {
+  width: ;
 }
 .col-md-2 {
   width: 16.66666667%;
   float: left;
 }
+.col-md-offset-2 {
+  width: ;
+}
 .col-md-1 {
   width: 8.33333333%;
   float: left;
 }
-@media screen and (min-width: 320px) {
+.col-md-offset-1 {
+  width: ;
+}
+@media screen and (min-width: 0) and (max-width: 480px) {
   .container {
     width: 100%;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
+  .col-md-12 {
+    width: 100%;
+    float: left;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+    float: left;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+    float: left;
+  }
+  .col-md-9 {
+    width: 75%;
+    float: left;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+    float: left;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+    float: left;
+  }
+  .col-md-6 {
+    width: 50%;
+    float: left;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+    float: left;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+  .col-md-3 {
+    width: 25%;
+    float: left;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+    float: left;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+    float: left;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    width: 100%;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
   }
   .col-xs-12 {
     width: 100%;
@@ -130,9 +742,13 @@
     float: left;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .container {
     width: 95%;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
   }
   .col-sm-12 {
     width: 100%;
@@ -183,9 +799,13 @@
     float: left;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
     width: 90%;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
   }
   .col-md-12 {
     width: 100%;
@@ -239,6 +859,10 @@
 @media screen and (min-width: 1200px) {
   .container {
     width: 80%;
+    -webkit-transition: 0.3s linear;
+    -moz-transition: 0.3s linear;
+    -o-transition: 0.3s linear;
+    transition: 0.3s linear;
   }
   .col-lg-12 {
     width: 100%;
@@ -289,13 +913,60 @@
     float: left;
   }
 }
-.clear {
-  zoom: 1;
+.col-offset-12 {
+  margin-left: 100%;
+}
+.col-offset-11 {
+  margin-left: 91.66666667%;
+}
+.col-offset-10 {
+  margin-left: 83.33333333%;
+}
+.col-offset-9 {
+  margin-left: 75%;
+}
+.col-offset-8 {
+  margin-left: 66.66666667%;
+}
+.col-offset-7 {
+  margin-left: 58.33333333%;
+}
+.col-offset-6 {
+  margin-left: 50%;
+}
+.col-offset-5 {
+  margin-left: 41.66666667%;
+}
+.col-offset-4 {
+  margin-left: 33.33333333%;
+}
+.col-offset-3 {
+  margin-left: 25%;
+}
+.col-offset-2 {
+  margin-left: 16.66666667%;
+}
+.col-offset-1 {
+  margin-left: 8.33333333%;
+}
+.col-offset-0 {
+  margin-left: 0%;
+}
+.container-full {
+  width: 100%;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.row-gap {
+  margin-top: 10px;
+}
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
 }
 .clear:after {
-  display: block;
-  visibility: hidden;
-  height: 0;
   clear: both;
-  content: ".";
 }

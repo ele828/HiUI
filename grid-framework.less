@@ -1,20 +1,13 @@
-* {
-    margin: 0 auto;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-		    box-sizing: border-box;
-}
-
 .container {
 	width: 80%;
 }
 
 .row {
-	width: 100%;
+	.clear();
 }
 
-.col {
-	.clear();
+.row {
+	width: 100%;
 }
 
 .col[class*="col-"] {
@@ -28,31 +21,57 @@
 		float: left;
 
 	}
+
+	.col-md-offset-@{index} {
+		width: ;
+	}
+
 	.create-grid(@index - 1);
 }
 
 .create-grid(@columns);
 
-@media screen and (min-width: @screenMobile) {
+@media screen and (min-width: 0) and (max-width: @screenMobile) {
 	.container {
 		width: 100%;
+		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
-	.col-xs-@{index} {
-		width: @columnWidth * @index;
-		float: left;
+		.col-md-@{index} {
+			width: @columnWidth * @index;
+			float: left;
 
-	}
-	.create-grid(@index - 1);
+		}
+		.create-grid(@index - 1);
 	}
 
-.create-grid(@columns);
+	.create-grid(@columns);
 
 }
 
-@media screen and (min-width: @screenTablet) {
+@media screen and (min-width: @screenMobile) and (max-width: @screenTablet) {
+	.container {
+		width: 100%;
+		.transition(@transition-time);
+	}
+	.create-grid(@index) when(@index > 0) {
+		.col-xs-@{index} {
+			width: @columnWidth * @index;
+			float: left;
+
+		}
+		.create-grid(@index - 1);
+	}
+
+	.create-grid(@columns);
+
+}
+
+
+@media screen and (min-width: @screenTablet) and (max-width: @screenDesktop) {
 	.container {
 		width: 95%;
+		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
 	.col-sm-@{index} {
@@ -63,13 +82,15 @@
 	.create-grid(@index - 1);
 	}
 
-.create-grid(@columns);
+	.create-grid(@columns);
+
 
 }
 
-@media screen and (min-width: @screenDesktop) {
+@media screen and (min-width: @screenDesktop) and (max-width: @screenLarge) {
 	.container {
 		width: 90%;
+		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
 	.col-md-@{index} {
@@ -87,7 +108,9 @@
 @media screen and (min-width: @screenLarge) {
 	.container {
 		width: 80%;
+		.transition(@transition-time);
 	}
+
 	.create-grid(@index) when(@index > 0) {
 	.col-lg-@{index} {
 		width: @columnWidth * @index;
@@ -101,14 +124,34 @@
 
 }
 
+// offset
+.offset(@index) when (@index > -1) {
+	.col-offset-@{index} {
+		margin-left: @columnWidth * @index;
+	}
+	.offset(@index - 1);
+}
+
+.offset(@columns);
+
+	
+.container-full {
+	width: 100%;
+	.transition(@transition-time);
+}
+
+.row-gap {
+	margin-top: @row-gap;
+}
+
 // clear floating
 .clear {
-	zoom: 1;
-	&:after {
-		display: block;
-		visibility: hidden;
-		height: 0;
-		clear: both;
-		content: ".";
-	}
+	  &:before,
+	  &:after {
+	    content: " "; // 1
+	    display: table; // 2
+	  }
+	  &:after {
+	    clear: both;
+	  }
 }
