@@ -1,0 +1,69 @@
+
+/* Preset Button Styles */
+
+.border-btn(@height; @width; @bg; @color; @font-color; @font-size) {
+	width: @width;
+	height: @height;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	font-size: @font-size;
+	white-space: nowrap;
+	color: @font-color;
+	border-radius: 5px;
+	border: 1px solid @color;
+	line-height: @height;
+	transition: .4s ease-out;
+	cursor: pointer;
+
+		&:active {
+			border-color: transparent;
+		}
+
+		&:hover {
+			border-color: @color;
+			background: @bg;
+			color: #fff;
+			cursor: pointer;
+		}
+}
+
+.btn-adjust (@font-size; @width; @height;) {
+	font-size: @font-size;
+	width: @width;
+	height: @height;
+	line-height: @height;
+}
+
+.btn-border-default {
+	.border-btn(@btn-height; @btn-width; #000; #000; #000;1rem);
+}
+
+.btn-border-primary {
+	.border-btn(@btn-height; @btn-width; @primary-color; @primary-color; @primary-color;1rem);
+}
+
+.btn-border-danger {
+	.border-btn(@btn-height; @btn-width; @danger-color; @danger-color; @danger-color;1rem);	
+}
+
+.btn-border-warning {
+	.border-btn(@btn-height; @btn-width; @warning-color; @warning-color; @warning-color;1rem);	
+}
+
+.btn-border-success {
+	.border-btn(@btn-height; @btn-width; @success-color; @success-color; @success-color;1rem);	
+}
+
+.btn-xs {
+	.btn-adjust(@btn-xs-font-size, @btn-xs-width, @btn-xs-height);
+}
+
+.btn-md {
+	.btn-adjust(@btn-md-font-size, @btn-md-width, @btn-md-height);
+}
+
+.btn-lg {
+	.btn-adjust(@btn-lg-font-size, @btn-lg-width, @btn-lg-height);
+}
