@@ -12,20 +12,19 @@
 }
 
 .col[class*="col-"] {
-
 	min-height: 1px;
 }
 
 .create-grid(@index) when(@index > 0) {
-	.col-md-@{index} {
+	.col-@{index} {
 		width: @columnWidth * @index;
 		float: left;
 
 	}
 
-	.col-md-offset-@{index} {
-		width: ;
-	}
+	// .col-offset-@{index} {
+	// 	width: ;
+	// }
 
 	.create-grid(@index - 1);
 }
@@ -38,15 +37,16 @@
 		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
-		.col-md-@{index} {
+		.col-mb-@{index} {
 			width: @columnWidth * @index;
-			float: left;
+			clear: left;
 
 		}
 		.create-grid(@index - 1);
 	}
 
 	.create-grid(@columns);
+
 
 }
 
@@ -56,10 +56,9 @@
 		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
-		.col-xs-@{index} {
+		.col-tl-@{index} {
 			width: @columnWidth * @index;
 			float: left;
-
 		}
 		.create-grid(@index - 1);
 	}
@@ -75,7 +74,7 @@
 		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
-	.col-sm-@{index} {
+	.col-dt-@{index} {
 		width: @columnWidth * @index;
 		float: left;
 
@@ -94,7 +93,7 @@
 		.transition(@transition-time);
 	}
 	.create-grid(@index) when(@index > 0) {
-	.col-md-@{index} {
+	.col-lg-@{index} {
 		width: @columnWidth * @index;
 		float: left;
 
