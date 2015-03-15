@@ -13,6 +13,12 @@
   -webkit-border-radius: @radius;
 }
 
+.box-shadow(@h-shadow; @v-shadow; @blur; @spread; @color) {
+  -moz-box-shadow: @h-shadow @v-shadow @blur @spread @color;
+  -webkit-box-shadow: @h-shadow @v-shadow @blur @spread @color;
+  box-shadow: @h-shadow @v-shadow @blur @spread @color;
+}
+
 .opacity(@opacity) {
   opacity: @opacity;
   // IE8 filter
