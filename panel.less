@@ -4,7 +4,7 @@
 ////////////////////
 ////////////////////
 .panel {
-	width: 95%;
+	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	border: 1px solid #ddd;
@@ -33,38 +33,38 @@
 	.box-shadow(0px; 0px; 5px; 1px; #e6e6e6);
 }
 
-.panel-color(@color) {
-	border-color: @color;
+.panel-color(@wcolor;@bgcolor) {
+	border-color: @wcolor;
 
 	&>.panel-head {
-		color: darken(@color, 20%);
-		background: lighten(@color, 40%);
-		border-bottom: 1px solid @color;
+		color: @wcolor;
+		background: @bgcolor;
+		border-bottom: 1px solid @wcolor;
 	}
 
 	&>.panel-foot {
-		border-top: 1px solid @color;
+		border-top: 1px solid @wcolor;
 		color: #929292;
 	}
 }
 
 .panel-success {
-	.panel-color(@success-color);
+	.panel-color(@success-color;@light-success-color);
 }
 
 .panel-primary {
-	.panel-color(@primary-color);
+	.panel-color(@primary-color;@light-primary-color);
 }
 
 .panel-danger {
-	.panel-color(@danger-color);
+	.panel-color(@danger-color;@light-danger-color);
 }
 
 .panel-warning {
-	.panel-color(@warning-color);
+	.panel-color(@warning-color;@light-warning-color);
 }
 
 .panel-default {
-	.panel-color(@default-color);
+	.panel-color(@default-color;@default-color);
 }
 

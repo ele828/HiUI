@@ -1,0 +1,75 @@
+/* Table preset */
+
+.table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+
+	th {
+		padding: 10px 0 10px 0;
+	}
+
+	&>thead>tr>th {
+		vertical-align: bottom;
+    	border-bottom: 2px solid #ddd;
+	}
+
+	th, tr {
+    	border-bottom: 1px solid #ddd;
+	}
+
+}
+
+// wraped by border
+.table-border {
+	border: 1px solid #ddd;
+}
+
+// stripe effect
+.table-stripe {
+	&>tbody>tr:nth-of-type(odd) {
+		background-color: @table-bg-color;
+	}
+}
+
+.table-condensed {
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+.table-hover {
+	&>tbody>tr:hover {
+	    background-color: @table-bg-color;
+	}
+}
+
+.adjust-text(@n) {
+	table {
+		font-size: 1rem * @n;
+		font-weight: @n * 30;
+	}
+}
+
+@media screen and (min-width: 0) and (max-width: @screenMobile) {
+	.adjust-text(.7);
+}
+
+@media screen and (min-width: @screenMobile) and (max-width: @screenTablet) {
+	.adjust-text(.8);
+}
+
+@media screen and (min-width: @screenTablet) and (max-width: @screenDesktop) {
+	.adjust-text(.9);
+}
+
+@media screen and (min-width: @screenDesktop) and (max-width: @screenLarge) {
+	.adjust-text(1);
+}
