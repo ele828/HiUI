@@ -32,3 +32,51 @@ a {
 	width: 100% !important;
 	display: block !important;
 }
+
+@media screen and (min-width: 0) and (max-width: @screenMobile) {
+	.mb-left {
+		display: block;
+		float: left;
+	}
+
+	.mb-right {
+		display: block;
+		float: right;
+	}
+}
+
+@media screen and (min-width: @screenMobile) and (max-width: @screenTablet) {
+	.tl-left {
+		display: block;
+		float: left;
+	}
+
+	.tl-right {
+		display: block;
+		float: right;
+	}
+}
+
+@media screen and (min-width: @screenTablet) and (max-width: @screenDesktop) {
+	.dt-left {
+		display: block;
+		float: left;
+	}
+
+	.dt-right {
+		display: block;
+		float: right;
+	}
+}
+
+@media screen and (min-width: @screenDesktop) and (max-width: @screenLarge) {
+	.lg-left {
+		display: block;
+		float: left;
+	}
+
+	.lg-right {
+		display: block;
+		float: right;
+	}
+}

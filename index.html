@@ -9,77 +9,112 @@
 <body>
 
 <div class="container">
-  <div class="row row-gap">
-      <div class="row row-gap">
-        <div class="col-25 col-mb-36">
-            <div class="panel panel-shadow">
-              <div class="panel-head center h3">用户登录</div>
-              <div class="panel-body">
-                 <form action="" method="GET">
-                <div class="">
-                <div class="row row-gap"></div>
-                  <div class="row">
-                    <div class="col-6 center" style="background=">
-                      <label class="input-label" class="">用户名</label>
-                    </div>
-                    <div class="col-30"><input type="text" class="input-danger col-30" placeholder="请输入用户名"/>
-                    </div>
-                  </div>
-
-                  <div class="row row-gap-lg">
-                    <div class="col-6 center" style="background=">
-                      <label class="input-label" class="">密码</label>
-                    </div>
-                    <div class="col-30 input-group">
-                      <span class="addon col-2">Add</span>
-                      <input type="text" class="input-primary col-28" placeholder="请输入密码"/>
-                    </div>
-                  </div>
-
-                  <div class="row row-gap-lg">
-                    <div class="col-6 center" style="background=">
-                      <label class="input-label" class="">E-mail</label>
-                    </div>
-                    <div class="col-30">
-                      <input type="text" class="input-success col-30" placeholder="请输入电子邮件"/>
-                    </div>
-                  </div>
-
-                  <div class="row row-gap-lg">
-                    <div class="col-6 center" style="background=">
-                      <label class="input-label" class="">E-mail</label>
-                    </div>
-                    <div class="col-30">
-                      <input type="text" class="input-warning col-30" placeholder="请输入电子邮件"/>
-                    </div>
-                  </div>
-
-
-                  <div class="row row-gap-lg">
-                    <div class="col-10 col-offset-6">
-                      <a href="#" class="btn-md btn-solid-success block">
-                      <i class="fa fa-check-circle-o"></i>
-                      &nbsp注册</a>
-                    </div>
-
-                    <div class="col-10 col-offset-4">
-                      <a href="#" class="btn-md btn-border-danger block">
-                      <i class="fa fa-times"></i>
-                      &nbsp重置</a>
-                    </div>
-                  </div>
-
-                  <div class="row row-gap"></div>
-</form>
-
-
+  <div class="row">
+    <div class="col-10 col-mb-36">
+        <div class="panel panel-shadow">
+              <div class="panel-body" style="height: 300px;">
+                <table class="table table-stripe table-condense">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                </tbody>
+            </table>
               </div>
-            </div>
-        </div>
-      </div>
-  </div>
+          </div>
+    </div>
+
+    <div class="col-25 col-mb-34 col-offset-1">
+        <div class="">
+          <div class="panel panel-shadow">
+              <div class="panel-head center danger-color">
+                <h4><i class="fa fa-user"></i>用户登录</h4>
+              </div>
+              <div class="panel-body">
+                <form action="" method="GET">
+                  <div class="">
+                  <div class="row row-gap"></div>
+                    <div class="row">
+                      <div class="col-6 center col-mb-36" style="background=">
+                        <label class="input-label mb-left" class="">用户名</label>
+                      </div>
+                      <div class="col-30 col-mb-36"><input type="text" class="input-danger col-30 col-mb-35" placeholder="请输入用户名"/>
+                      </div>
+                    </div>
+
+                    <div class="row row-gap-lg">
+                      <div class="col-6 center col-mb-36" style="background=">
+                        <label class="input-label mb-left" class="">密码</label>
+                      </div>
+                      <div class="col-30 col-mb-36">
+                        <input type="text" class="input-primary col-30 col-mb-35" placeholder="请输入密码"/>
+                      </div>
+                    </div>
+
+                    <div class="row row-gap-lg">
+                      <div class="col-6 center col-mb-36" style="background=">
+                        <label class="input-label mb-left" class="">E-mail</label>
+                      </div>
+                      <div class="col-30 col-mb-36">
+                        <input type="text" class="input-success col-30 col-mb-35" placeholder="请输入电子邮件"/>
+                      </div>
+                    </div>
+
+                    <div class="row row-gap-lg">
+                      <div class="col-6 center col-mb-36" style="background=">
+                        <label class="input-label mb-left" class="">E-mail</label>
+                      </div>
+                      <div class="col-30 col-mb-36">
+                        <input type="text" class="input-warning col-30  col-mb-35" placeholder="请输入电子邮件"/>
+                      </div>
+                    </div>
+
+                    <div class="row row-gap-lg">
+                      <div class="col-10 col-offset-6">
+                        <a href="#" class="btn-md btn-border-success block">
+                        <i class="fa fa-check-circle-o"></i>
+                        &nbsp注册</a>
+                      </div>
+
+                      <div class="col-10 col-offset-4">
+                        <a href="#" class="btn-md btn-border-danger block">
+                        <i class="fa fa-times"></i>
+                        &nbsp重置</a>
+                      </div>
+                    </div>
+
+                    <div class="row row-gap"></div>
+                    </div></form>
+              </div>
+          </div>
+    </div>
+    </div>
   </div>
 </div>
+
 
 <div class="container">
 	<div class="row row-gap">

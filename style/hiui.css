@@ -40,6 +40,46 @@ a {
   width: 100% !important;
   display: block !important;
 }
+@media screen and (min-width: 0) and (max-width: 480px) {
+  .mb-left {
+    display: block;
+    float: left;
+  }
+  .mb-right {
+    display: block;
+    float: right;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .tl-left {
+    display: block;
+    float: left;
+  }
+  .tl-right {
+    display: block;
+    float: right;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .dt-left {
+    display: block;
+    float: left;
+  }
+  .dt-right {
+    display: block;
+    float: right;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .lg-left {
+    display: block;
+    float: left;
+  }
+  .lg-right {
+    display: block;
+    float: right;
+  }
+}
 /* Color Preset */
 .primary-bg-color {
   background: #00a8e6;
