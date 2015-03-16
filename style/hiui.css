@@ -1604,6 +1604,9 @@ table {
 .row-gap {
   margin-top: 10px;
 }
+.row-gap-lg {
+  margin-top: 20px;
+}
 .clear:before,
 .clear:after {
   content: " ";
@@ -1799,7 +1802,7 @@ table {
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #efefef;
+  color: #fff;
   background: #c4c4c4;
   border-radius: 3px;
   line-height: 35px;
@@ -1829,7 +1832,7 @@ table {
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #efefef;
+  color: #fff;
   background: #00a8e6;
   border-radius: 3px;
   line-height: 35px;
@@ -1859,7 +1862,7 @@ table {
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #efefef;
+  color: #fff;
   background: #d9534f;
   border-radius: 3px;
   line-height: 35px;
@@ -1889,7 +1892,7 @@ table {
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #efefef;
+  color: #fff;
   background: #f0ad4e;
   border-radius: 3px;
   line-height: 35px;
@@ -1919,7 +1922,7 @@ table {
   touch-action: manipulation;
   font-size: 1rem;
   white-space: nowrap;
-  color: #efefef;
+  color: #fff;
   background: #5cb85c;
   border-radius: 3px;
   line-height: 35px;
@@ -1985,7 +1988,7 @@ table {
   border-bottom-left-radius: 0;
 }
 .panel-body {
-  padding: 10px 10px;
+  padding: 20px 20px;
   line-height: 1.7;
 }
 .panel-foot {
@@ -3858,7 +3861,7 @@ table {
 .fa-medium:before {
   content: "\f23a";
 }
-.input {
+.input-primary {
   display: inline-block;
   padding: 8px 8px 8px 12px;
   border: 1px solid #ddd;
@@ -3874,15 +3877,111 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.input:focus {
+.input-primary[disabled*="disabled"] {
+  background: #eeeeee;
+}
+.input-primary:focus {
   border: 1px solid #00a8e6;
-  border-left: 4px solid #00a8e6;
   -moz-box-shadow: 0px 0px 5px 0px #1ac1ff;
   -webkit-box-shadow: 0px 0px 5px 0px #1ac1ff;
   box-shadow: 0px 0px 5px 0px #1ac1ff;
 }
-.input-span {
+.input-danger {
+  display: inline-block;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: .8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-danger[disabled*="disabled"] {
+  background: #eeeeee;
+}
+.input-danger:focus {
+  border: 1px solid #d9534f;
+  -moz-box-shadow: 0px 0px 5px 0px #e27c79;
+  -webkit-box-shadow: 0px 0px 5px 0px #e27c79;
+  box-shadow: 0px 0px 5px 0px #e27c79;
+}
+.input-success {
+  display: inline-block;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: .8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-success[disabled*="disabled"] {
+  background: #eeeeee;
+}
+.input-success:focus {
+  border: 1px solid #5cb85c;
+  -moz-box-shadow: 0px 0px 5px 0px #80c780;
+  -webkit-box-shadow: 0px 0px 5px 0px #80c780;
+  box-shadow: 0px 0px 5px 0px #80c780;
+}
+.input-warning {
+  display: inline-block;
+  padding: 8px 8px 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: .8rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.input-warning[disabled*="disabled"] {
+  background: #eeeeee;
+}
+.input-warning:focus {
+  border: 1px solid #f0ad4e;
+  -moz-box-shadow: 0px 0px 5px 0px #f4c37d;
+  -webkit-box-shadow: 0px 0px 5px 0px #f4c37d;
+  box-shadow: 0px 0px 5px 0px #f4c37d;
+}
+.input-label {
   font-size: 1rem;
+  display: inline-block;
+  height: inherit;
+  vertical-align: middle;
+  margin-top: 4px;
+}
+.input-group {
+  line-height: 2;
+  margin: 15px 0px;
+}
+.input-group .addon {
+  border: 1px solid #ddd;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  background: #ccc;
+}
+.input-group input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-left: 0;
 }
 /* Table preset */
 .table {

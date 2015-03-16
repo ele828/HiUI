@@ -1,4 +1,4 @@
-.input {
+.input(@border-color){
 	display: inline-block;
 	padding: 8px 8px 8px 12px;
 	border: 1px solid #ddd;
@@ -9,13 +9,52 @@
    	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 
+	&[disabled*="disabled"] {
+		background: @disabled-color;
+	}
+
 	&:focus {
-		border: 1px solid @primary-color;
-		border-left: 4px solid @primary-color;
-		.box-shadow(0px; 0px; 5px; 0px; lighten(@primary-color, 10%));
+		border: 1px solid @border-color;
+		.box-shadow(0px; 0px; 5px; 0px; lighten(@border-color, 10%));
 	}
 }
 
-.input-span {
+.input-primary {
+	.input(@primary-color);
+}
+
+.input-danger {
+	.input(@danger-color);
+}
+
+.input-success {
+	.input(@success-color);
+}
+
+.input-warning {
+	.input(@warning-color);
+}
+
+.input-label {
 	font-size: 1rem;
+	display: inline-block;
+	height: inherit;
+	vertical-align: middle;
+	margin-top: 4px;
+}
+
+.input-group {
+	line-height: 2;
+	margin: 15px 0px;
+
+	& .addon {
+		border: 1px solid #ddd;
+		.border-left-radius(4px);
+		background: #ccc;
+	}
+
+	& input {
+		.border-left-radius(0);
+		border-left: 0;
+	}
 }
