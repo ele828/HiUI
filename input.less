@@ -19,6 +19,27 @@
 	}
 }
 
+.input-border(@border-color){
+	display: inline-block;
+	padding: 11px 8px 11px 12px;
+	border: 1px solid #ddd;
+	.border-radius(4px);
+	.transition(.3s);
+	font-size: .8rem;
+	-webkit-box-sizing: border-box;
+   	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	&[disabled*="disabled"] {
+		background: @disabled-color;
+	}
+
+	&:focus {
+		border: 1px solid @border-color;
+		border-left: 4px solid @border-color;
+	}
+}
+
 .input-primary {
 	.input(@primary-color);
 }
@@ -33,6 +54,22 @@
 
 .input-warning {
 	.input(@warning-color);
+}
+
+.input-border-primary {
+	.input-border(@primary-color);
+}
+
+.input-border-danger {
+	.input-border(@danger-color);
+}
+
+.input-border-success {
+	.input-border(@success-color);
+}
+
+.input-border-warning {
+	.input-border(@warning-color);
 }
 
 .input-label {
