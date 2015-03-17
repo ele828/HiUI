@@ -42,3 +42,16 @@
   border-bottom-left-radius: @radius;
      border-top-left-radius: @radius;
 }
+
+
+// clear floating
+.clear {
+    &:before,
+    &:after {
+      content: " "; // 1
+      display: table; // 2
+    }
+    &:after {
+      clear: both;
+    }
+}

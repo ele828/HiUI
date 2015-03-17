@@ -4,12 +4,21 @@
 ***	Define global variables
 ***
 **/
+/* navbar settings */
 /* transition-time */
 /* Font Family */
 /* global color var */
 /* button color var */
 /* Table */
 /* Minxins */
+.clear:before,
+.clear:after {
+  content: " ";
+  display: table;
+}
+.clear:after {
+  clear: both;
+}
 /* Base of framework */
 /* Global basic setting */
 * {
@@ -39,6 +48,11 @@ a {
 .block {
   width: 100% !important;
   display: block !important;
+}
+.shadow {
+  -moz-box-shadow: 0px 0px 3px 1px #f0efef;
+  -webkit-box-shadow: 0px 0px 3px 1px #f0efef;
+  box-shadow: 0px 0px 3px 1px #f0efef;
 }
 @media screen and (min-width: 0) and (max-width: 480px) {
   .mb-left {
@@ -202,7 +216,7 @@ strong {
   font-weight: 1000;
 }
 .grand-title {
-  font-weight: 700;
+  font-weight: 0;
   font-size: 3rem;
 }
 .grand-title small {
@@ -296,7 +310,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.1rem;
   }
   .grand-title small {
@@ -391,7 +405,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.4rem;
   }
   .grand-title small {
@@ -486,7 +500,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.7rem;
   }
   .grand-title small {
@@ -581,7 +595,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 3rem;
   }
   .grand-title small {
@@ -910,6 +924,12 @@ table {
     width: 2.77777778%;
     clear: left;
   }
+  .hide-mb {
+    display: none;
+  }
+  .show-mb {
+    display: block;
+  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .container {
@@ -1062,6 +1082,12 @@ table {
   .col-tl-1 {
     width: 2.77777778%;
     float: left;
+  }
+  .hide-tl {
+    display: none;
+  }
+  .show-tl {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -1216,6 +1242,12 @@ table {
     width: 2.77777778%;
     float: left;
   }
+  .hide-dt {
+    display: none;
+  }
+  .show-dt {
+    display: block;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .container {
@@ -1368,6 +1400,12 @@ table {
   .col-lg-1 {
     width: 2.77777778%;
     float: left;
+  }
+  .hide-lg {
+    display: none;
+  }
+  .show-lg {
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1647,15 +1685,50 @@ table {
 .row-gap-lg {
   margin-top: 20px;
 }
-.clear:before,
-.clear:after {
+/* Components */
+.nav {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.nav-ul {
+  height: 30px;
+  white-space: nowrap;
+}
+.nav-ul:before,
+.nav-ul:after {
   content: " ";
   display: table;
 }
-.clear:after {
+.nav-ul:after {
   clear: both;
 }
-/* Components */
+.nav-ul li {
+  height: 100%;
+  display: inline-block;
+  margin-right: 50px;
+  float: left;
+}
+.nav-ul a {
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  line-height: 30px;
+  color: #000;
+  font-size: 1.15rem;
+  font-weight: 0;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+.nav-ul a:visited {
+  color: #000;
+}
+.nav-ul a:hover,
+.nav-ul a:active {
+  color: #00a8e6;
+}
 /* Preset Button Styles */
 .btn-border-default {
   min-width: 70px;
@@ -3903,7 +3976,7 @@ table {
 }
 .input-primary {
   display: inline-block;
-  padding: 8px 8px 8px 12px;
+  padding: 11px 8px 11px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3928,7 +4001,7 @@ table {
 }
 .input-danger {
   display: inline-block;
-  padding: 8px 8px 8px 12px;
+  padding: 11px 8px 11px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3953,7 +4026,7 @@ table {
 }
 .input-success {
   display: inline-block;
-  padding: 8px 8px 8px 12px;
+  padding: 11px 8px 11px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -3978,7 +4051,7 @@ table {
 }
 .input-warning {
   display: inline-block;
-  padding: 8px 8px 8px 12px;
+  padding: 11px 8px 11px 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
   -moz-border-radius: 4px;
@@ -4006,7 +4079,7 @@ table {
   display: inline-block;
   height: inherit;
   vertical-align: middle;
-  margin-top: 4px;
+  margin-top: 7px;
 }
 .input-group {
   line-height: 2;
@@ -4137,7 +4210,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.1rem;
   }
   .grand-title small {
@@ -4232,7 +4305,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.4rem;
   }
   .grand-title small {
@@ -4327,7 +4400,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 2.7rem;
   }
   .grand-title small {
@@ -4422,7 +4495,7 @@ table {
     font-weight: 1000;
   }
   .grand-title {
-    font-weight: 700;
+    font-weight: 0;
     font-size: 3rem;
   }
   .grand-title small {

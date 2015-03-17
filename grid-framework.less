@@ -46,6 +46,13 @@
 
 	.create-grid(@columns);
 
+	.hide-mb {
+		display: none;
+	}
+
+	.show-mb {
+		display: block;
+	}
 
 }
 
@@ -63,6 +70,14 @@
 	}
 
 	.create-grid(@columns);
+
+	.hide-tl {
+		display: none;
+	}
+
+	.show-tl {
+		display: block;
+	}
 
 }
 
@@ -82,7 +97,14 @@
 	}
 
 	.create-grid(@columns);
+	
+	.hide-dt {
+		display: none;
+	}
 
+	.show-dt {
+		display: block;
+	}
 
 }
 
@@ -100,7 +122,15 @@
 	.create-grid(@index - 1);
 	}
 
-.create-grid(@columns);
+	.create-grid(@columns);
+
+	.hide-lg {
+		display: none;
+	}
+
+	.show-lg {
+		display: block;
+	}
 	
 }
 
@@ -145,16 +175,4 @@
 
 .row-gap-lg {
 	margin-top: @row-gap-lg;
-}
-
-// clear floating
-.clear {
-	  &:before,
-	  &:after {
-	    content: " "; // 1
-	    display: table; // 2
-	  }
-	  &:after {
-	    clear: both;
-	  }
 }

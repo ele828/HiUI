@@ -1,0 +1,40 @@
+.nav {
+	padding: 15px 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.nav-ul {
+	height: @navbar-height;
+	white-space:nowrap;
+
+	.clear();
+
+	& li {
+		height: 100%;
+		display: inline-block;
+		margin-right: 50px;
+		float: left;
+	}
+
+	& a {
+		text-align: center;
+		vertical-align: middle;
+		display: inline-block;
+		height: 100%;
+		line-height: @navbar-height;
+		color: #000;
+		font-size: 1.15rem;
+		font-weight: 0;
+		.transition(.3s);
+	}
+
+	& a:visited {
+		color: #000;
+	}
+
+	& a:hover, & a:active {
+		color: @primary-color;
+	}
+
+
+}
