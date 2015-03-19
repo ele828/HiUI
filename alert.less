@@ -1,0 +1,33 @@
+/*
+*  Alert Widget
+*/
+
+.alert {
+	display: block;
+	width: 100%;
+	margin: 10px 10px;
+	padding: 15px 15px;
+	.border-radius(4px);
+}
+
+.alert-gen(@bg, @bd) {
+	border: 1px solid @bd;
+	background: @bg;
+	color: darken(@bd,20%);
+}
+
+.alert-success {
+	.alert-gen(@light-success-color, @success-color);
+}
+
+.alert-warning {
+	.alert-gen(@light-warning-color, @warning-color);
+}
+
+.alert-primary {
+	.alert-gen(@light-primary-color, @primary-color);
+}
+
+.alert-danger {
+	.alert-gen(@light-danger-color, @danger-color);
+}

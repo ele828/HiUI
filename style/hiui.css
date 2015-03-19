@@ -211,10 +211,6 @@ h6 small,
 .h6 small {
   font-size: 1.2rem;
 }
-b,
-strong {
-  font-weight: 1000;
-}
 .grand-title {
   font-weight: 0;
   font-size: 3rem;
@@ -304,10 +300,6 @@ table {
   h6 small,
   .h6 small {
     font-size: 0.84rem;
-  }
-  b,
-  strong {
-    font-weight: 1000;
   }
   .grand-title {
     font-weight: 0;
@@ -400,10 +392,6 @@ table {
   .h6 small {
     font-size: 0.96rem;
   }
-  b,
-  strong {
-    font-weight: 1000;
-  }
   .grand-title {
     font-weight: 0;
     font-size: 2.4rem;
@@ -495,10 +483,6 @@ table {
   .h6 small {
     font-size: 1.08rem;
   }
-  b,
-  strong {
-    font-weight: 1000;
-  }
   .grand-title {
     font-weight: 0;
     font-size: 2.7rem;
@@ -589,10 +573,6 @@ table {
   h6 small,
   .h6 small {
     font-size: 1.2rem;
-  }
-  b,
-  strong {
-    font-weight: 1000;
   }
   .grand-title {
     font-weight: 0;
@@ -4305,10 +4285,6 @@ table {
   .h6 small {
     font-size: 0.84rem;
   }
-  b,
-  strong {
-    font-weight: 1000;
-  }
   .grand-title {
     font-weight: 0;
     font-size: 2.1rem;
@@ -4399,10 +4375,6 @@ table {
   h6 small,
   .h6 small {
     font-size: 0.96rem;
-  }
-  b,
-  strong {
-    font-weight: 1000;
   }
   .grand-title {
     font-weight: 0;
@@ -4495,10 +4467,6 @@ table {
   .h6 small {
     font-size: 1.08rem;
   }
-  b,
-  strong {
-    font-weight: 1000;
-  }
   .grand-title {
     font-weight: 0;
     font-size: 2.7rem;
@@ -4590,10 +4558,6 @@ table {
   .h6 small {
     font-size: 1.2rem;
   }
-  b,
-  strong {
-    font-weight: 1000;
-  }
   .grand-title {
     font-weight: 0;
     font-size: 3rem;
@@ -4609,4 +4573,36 @@ table {
     font-size: 1rem;
     font-weight: 30;
   }
+}
+/*
+*  Alert Widget
+*/
+.alert {
+  display: block;
+  width: 100%;
+  margin: 10px 10px;
+  padding: 15px 15px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.alert-success {
+  border: 1px solid #5cb85c;
+  background: #dff0d8;
+  color: #357935;
+}
+.alert-warning {
+  border: 1px solid #f0ad4e;
+  background: #fcf8e3;
+  color: #c77c11;
+}
+.alert-primary {
+  border: 1px solid #00a8e6;
+  background: #d9edf7;
+  color: #005d80;
+}
+.alert-danger {
+  border: 1px solid #d9534f;
+  background: #f2dede;
+  color: #a02622;
 }
